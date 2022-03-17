@@ -1,0 +1,74 @@
+a {
+  @include typeface-2(p2, desktop);
+  text-decoration: none;
+  color: $black-normal;
+
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btn {
+  background: linear-gradient(
+    220.94deg,
+    $secondary-normal 14.43%,
+    $primary-normal 85.28%
+  );
+  color: $white-light;
+
+  border-radius: 16px;
+  padding: 14px 32px;
+  box-shadow: 0px 43px 60px rgba(169, 80, 196, 0.14),
+    0px 12.9632px 18.0882px rgba(169, 80, 196, 0.0912224),
+    0px 5.38427px 7.51293px rgba(169, 80, 196, 0.07),
+    0px 1.94738px 2.71728px rgba(169, 80, 196, 0.0487776);
+
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 17px 60px rgba(169, 80, 196, 0.64),
+      0px 3.79717px 13.4018px rgba(169, 80, 196, 0.32277),
+      0px 1.13052px 3.99006px rgba(169, 80, 196, 0.125468);
+  }
+}
+
+.link {
+  display: inline-block;
+  color: $primary-normal;
+  background-image: url("../svg/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  font-size: 18px;
+  padding: 16px 16px 16px 40px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+
+    top: 75%;
+    left: 56px;
+
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+
+    transition: .5s ease;
+
+    background-color: $secondary-light;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    padding-left: 64px;
+    background-position: 8px 50%;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
